@@ -9,7 +9,7 @@ describe("Given the RestRepository class and we make an instance", () => {
     expect(repo).toBeTruthy();
   });
 
-  describe("When it's method getAll is invoked", () => {
+  describe("When the method getAll is invoked", () => {
     test("And the API response is succesfull. it should reutrn all the data", async () => {
       const dataMocked: Array<Robot> = [];
       global.fetch = jest
