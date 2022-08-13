@@ -20,5 +20,15 @@ describe("Given the RestRepository class", () => {
 
       expect(resultedData).toStrictEqual(dataMocked);
     });
+
+    test("hh", async () => {
+      global.fetch = jest
+        .fn()
+        .mockResolvedValue({ json: jest.fn().mockResolvedValue(Error) });
+
+      await repo.getAll();
+
+      expect(repo.getAll).toThrowError();
+    });
   });
 });
