@@ -1,4 +1,5 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
+import robotsReducer from "../features/robots/reducer/robotsReducer";
 
 export const store = configureStore({
   reducer: { robots: robotsReducer },
