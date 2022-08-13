@@ -1,4 +1,5 @@
 import Robot from "../../features/robots/models/Robot";
+import RestRepository from "./RestRepository";
 
 describe("Given the RestRepository class and we make an instance", () => {
   const url = "";
