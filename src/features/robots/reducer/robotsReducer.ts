@@ -5,8 +5,8 @@ import { loadRobotsActionCreator } from "./actionCreator";
 const initialState: Array<Robot> = [];
 
 const robotsReducer = createReducer(initialState, (builder) => {
-  builder.addDefaultCase((state: Array<Robot>) => [...state]);
   builder.addCase(loadRobotsActionCreator, (state, action) => action.payload);
+  builder.addDefaultCase((state: Array<Robot>) => [...state]);
 });
 
 export default robotsReducer;
