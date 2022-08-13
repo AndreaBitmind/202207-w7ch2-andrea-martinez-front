@@ -1,6 +1,6 @@
-import { RestRepository } from "./models/RestRepository";
+import IRestRepository from "./models/RestRepository";
 
-export class restRepository<T extends Response> implements RestRepository<T> {
+class RestRepository<T extends Response> implements IRestRepository<T> {
   constructor(public url: string) {}
 
   getAll() {
@@ -9,3 +9,5 @@ export class restRepository<T extends Response> implements RestRepository<T> {
       .catch((error) => error);
   }
 }
+
+export default RestRepository;
