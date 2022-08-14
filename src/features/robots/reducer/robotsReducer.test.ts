@@ -1,5 +1,5 @@
 import Robot from "../models/Robot";
-import { loadRobotsActionCreator } from "./actionCreator";
+import { loadRobotsAction } from "./actionCreator";
 import robotsReducer from "./robotsReducer";
 
 describe("Given the robots reducer", () => {
@@ -22,7 +22,7 @@ describe("Given the robots reducer", () => {
           skills: { creationDate: "", endurance: 0, speed: 0 },
         },
       ];
-      const action = loadRobotsActionCreator(newRobots);
+      const action = loadRobotsAction(newRobots);
 
       const result = robotsReducer(previusState, action);
 
