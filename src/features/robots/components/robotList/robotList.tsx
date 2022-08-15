@@ -8,9 +8,9 @@ const RobotsList = (): JSX.Element => {
   const robots = useSelector((state: RootState) => state.robots);
 
   const dispatch = useDispatch();
-  const url = "http://localhost:4000/robots";
+  const url = process.env.REACT_APP_LOCAL_API_URL as string;
 
-  const repoRobots = useMemo(() => new RestRepository<Response>(url), []);
+  const repoRobots = useMemo(() => new RestRepository<Response>(url), [url]);
 
   useEffect(() => {
     repoRobots.getAll().then((robots) => dispatch(loadRobotsAction(robots)));
