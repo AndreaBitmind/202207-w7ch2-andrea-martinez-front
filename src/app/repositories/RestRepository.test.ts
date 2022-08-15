@@ -1,4 +1,4 @@
-import Robot from "../../features/robots/models/Robot";
+import { FetchedRobot } from "../../features/robots/models/Robot";
 import RestRepository from "./RestRepository";
 
 describe("Given the RestRepository class and we make an instance", () => {
@@ -11,7 +11,11 @@ describe("Given the RestRepository class and we make an instance", () => {
 
   describe("When the method getAll is invoked", () => {
     test("And the API response is succesfull. it should reutrn all the data", async () => {
-      const dataMocked: Array<Robot> = [];
+      const dataMocked: FetchedRobot = {
+        robots: [
+          { creationDate: "", endurance: 8, imageURL: "", name: "", speed: 1 },
+        ],
+      };
       global.fetch = jest
         .fn()
         .mockResolvedValue({ json: jest.fn().mockResolvedValue(dataMocked) });

@@ -19,7 +19,9 @@ describe("Given the robots reducer", () => {
         {
           imageURL: "",
           name: "",
-          skills: { creationDate: "", endurance: 0, speed: 0 },
+          creationDate: "",
+          endurance: 0,
+          speed: 0,
         },
       ];
       const action = loadRobotsAction(newRobots);

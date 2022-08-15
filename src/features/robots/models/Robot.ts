@@ -1,11 +1,13 @@
 interface Robot {
   name: string;
   imageURL: string;
-  skills: {
-    speed: number;
-    endurance: number;
-    creationDate: string;
-  };
+  speed: number;
+  endurance: number;
+  creationDate: string;
+}
+
+export interface FetchedRobot {
+  robots: Robot[];
 }
 
 export default Robot;
