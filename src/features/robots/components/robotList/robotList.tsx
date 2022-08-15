@@ -4,6 +4,7 @@ import RestRepository from "../../../../app/repositories/RestRepository";
 import { RootState } from "../../../../app/store";
 import { loadRobotsAction } from "../../reducer/actionCreator";
 import RobotCard from "../RobotCard/RobotCard";
+import "./RobotList.css";
 
 const RobotsList = (): JSX.Element => {
   const dispatch = useDispatch();

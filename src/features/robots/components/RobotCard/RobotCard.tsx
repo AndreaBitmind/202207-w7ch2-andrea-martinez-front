@@ -1,4 +1,5 @@
 import Robot from "../../models/Robot";
+import "./RobotCard.css";
 
 interface RobotCardProps {
   robot: Robot;
