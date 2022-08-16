@@ -11,11 +11,3 @@ class RestRepository<T extends Response> implements IRestRepository<T> {
 }
 
 export default RestRepository;
-/* getAll() {
-    let robots: Promise<Array<T>>
-    (async () => {
-      const response = await fetch(`${this.url}robots`);
-      robots = await response.json();
-    })();
-    return { robots };
-  } */

@@ -24,7 +24,7 @@ const RobotsList = (): JSX.Element => {
   const robots = useSelector((state: RootState) => state.robots);
   return (
     <>
-      <h2 className="robotList__title">Robot List</h2>
+      <h1 className="robotList__title">Robot List</h1>
       <ul className="robotList__list">
         {robots.map((robot) => (
           <RobotCard key={robot.name} robot={robot} />
